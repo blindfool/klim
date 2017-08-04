@@ -1,5 +1,4 @@
 /*MAIN JS*/
-
 /*FUNCTIONS*/
 function CheckPageSize() {
 	$(window).resize(function() {
@@ -10,7 +9,6 @@ function CheckPageSize() {
 			$('footer').css('margin-top', '-' + footerHeight + 'px');
 			$('.all-wrap').css('margin-bottom', '-' + footerHeight + 'px');
 			$('.content-wrap').css('padding-bottom', footerHeight + 25 + 'px');
-			
 			if($('.slide-content')){
 				var scHeight = $('.slide-content').outerHeight();
 				$('.slide-content').css('margin-top', '-' + scHeight/2 + 'px');
@@ -19,12 +17,10 @@ function CheckPageSize() {
 		catch(e){}
 	});
 }
-
 /*Ready*/
 $(document).ready(function(){
 	CheckPageSize();
 	setTimeout(function() {$(window).resize();}, 100);
-	
 	/*slick*/
 	$('.main-slider').slick({
  		autoplay: true,
@@ -35,7 +31,6 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1
 	});
-	
 	/*filter*/
 	$(".field-toggle").click(function() {
 		var clickitem = $(this),
@@ -49,12 +44,10 @@ $(document).ready(function(){
 		clickitem.parents('.field').find(".field-body").slideToggle();
 	});	
 });
-
 /*Events*/
 $(window).scroll(function(){
 	
 });
-
 $(window).resize(function(){
 
 });
